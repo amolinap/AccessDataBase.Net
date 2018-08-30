@@ -25,9 +25,9 @@ namespace DataBase
         private NpgsqlCommand command;
         private NpgsqlTransaction transaction;
 
-        public DBPostgreSQL(string user, string pass, string db_name, string server)
+        public DBPostgreSQL(string user, string pass, string db_name, string server, int port = 5432)
         {
-            connection = new NpgsqlConnection("Server = " + server + "; Port = 5432; User id = " + user + "; Password = " + pass + "; Database = " + db_name + ";");
+            connection = new NpgsqlConnection("Server = " + server + "; Port = " + port + "; User id = " + user + "; Password = " + pass + "; Database = " + db_name + ";");
             transaction = null;
             command = new NpgsqlCommand();
         }
@@ -65,7 +65,7 @@ namespace DataBase
             }
         }
 
-        public DataSet RunQuery(string sql)
+        public DataSet RunQueryDataSet(string sql)
         {
             try
             {
@@ -103,13 +103,13 @@ namespace DataBase
 
             if (resultado == null)
             {
-                resultado = "Nulo";
+                resultado = string.Empty;
             }
 
             return resultado.ToString();
         }
 
-        public DataTable RunSearch(string sql)
+        public DataTable RunQueryDataTable(string sql)
         {
             command.Connection = Connection();
             command.CommandText = sql;
@@ -123,9 +123,9 @@ namespace DataBase
             return dTable;
         }
 
-        public string RunCommand(string sql)
+        public bool RunQueryCommand(string sql)
         {
-            if (sql != "")
+            if (!string.IsNullOrEmpty(sql))
             {
                 try
                 {
@@ -143,17 +143,17 @@ namespace DataBase
                 {
                     transaction.Rollback();
 
-                    return Excepcion.Message;
+                    return false;
                 }
                 finally
                 {
                     CloseConnection();
                 }
 
-                return "TRUE";
+                return true;
             }
 
-            return "FALSE";
+            return false;
         }
     }
 }
