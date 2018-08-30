@@ -1,3 +1,9 @@
 -----------------------------------------------------------
 Librerias para acceso a Base de Datos usando .Net
 
+- SQL Server / SQL Server Express
+- PostgreSQL
+- MySQL
+
+Descargar Npgsql para Framework 4.5
+https://github.com/npgsql/npgsql/releases/download/v2.1.0/Npgsql-2.1.0-net45.zip
