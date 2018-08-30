@@ -32,8 +32,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Libs">
-      <HintPath>..\Libs\bin\Debug\Libs.dll</HintPath>
+    <Reference Include="DataBase.Net">
+      <HintPath>..\Libs\bin\Debug\DataBase.Net.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
