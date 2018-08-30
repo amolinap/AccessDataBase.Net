@@ -2,7 +2,6 @@ Servidorhttp
 WebCarpetas
 bin
 obj
-*.csproj
 *.user
 *.xml
 *.suo
