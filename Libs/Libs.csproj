@@ -7,8 +7,8 @@
     <ProjectGuid>{8832D48B-EDB1-4358-8E28-0E094EF1BF64}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DataBase.Net</RootNamespace>
-    <AssemblyName>DataBase.Net</AssemblyName>
+    <RootNamespace>DataBaseNet</RootNamespace>
+    <AssemblyName>DataBaseNet</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

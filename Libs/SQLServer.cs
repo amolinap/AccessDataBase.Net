@@ -3,7 +3,7 @@ using System.Text;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace BaseDatos
+namespace DataBaseNet
 {
     public class DBSQLServer
     {

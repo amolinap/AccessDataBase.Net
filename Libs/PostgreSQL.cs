@@ -17,7 +17,7 @@ using System.Text;
 using System.Data;
 using Npgsql;
 
-namespace DataBase
+namespace DataBaseNet
 {
     public class DBPostgreSQL
     {
