@@ -11,9 +11,9 @@ namespace DataBaseNet
         private SqlCommand comando;
         private SqlTransaction transaccion;
 
-        public DBSQLServer(string usuario, string contrasena, string nombreBD, string servidor)
+        public DBSQLServer(string usuario, string contrasena, string nombreBD, string servidor, string instancia)
         {
-            cadenaConexion = new SqlConnection("Data Source=" + servidor + "\\DBEXPRESS; Initial Catalog=" + nombreBD + "; integrated security=false; User Id=sa; Password=" + contrasena + ";");
+            cadenaConexion = new SqlConnection("Data Source=" + servidor + "\\" + instancia + "; Initial Catalog=" + nombreBD + "; integrated security=false; User Id=sa; Password=" + contrasena + ";");
             transaccion = null;
             comando = new SqlCommand();
         }
