@@ -15,6 +15,9 @@ Descargar dlls para conectarnos a MySQL
 - https://downloads.mysql.com/archives/get/file/mysql-connector-net-6.9.5-noinstall.zip
 - Agregar referencia a MySQL.Data.dll
 
+Descargar Oracle Express Edition
+- Ver Oracle/README
+
 Cargar referencia para producción
 - Para hacer referencia en un proyecto de producción copiar la carpeta dlls
 - Agregar referencia a DataBaseNet.dll
