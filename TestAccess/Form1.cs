@@ -56,5 +56,12 @@ namespace DataBasesTest
                 MessageBox.Show(ex.Message);
             }*/
         }
+
+        private void btTestConnection_Click(object sender, EventArgs e)
+        {
+            DBOracle mySQL = new DBOracle(tbUser.Text, tbPassword.Text, tbWorkspace.Text, tbServer.Text, int.Parse(tbPort.Text));
+
+            dataGridView1.DataSource = mySQL.RunQueryDataSet("select * from usuarios").Tables[0].DefaultView;
+        }
     }
 }
