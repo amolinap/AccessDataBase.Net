@@ -99,5 +99,26 @@ namespace DataBasesTest
         {
             tbMessages.AppendText(oracleDB.ConnectionString() + Environment.NewLine);
         }
+
+        DBSQLServer sqlServer;
+        private void btSQLConnect_Click(object sender, EventArgs e)
+        {
+            sqlServer = new DBSQLServer(tbSQLUser.Text, tbSQLPassword.Text, tbSQLCatalog.Text, tbSQLServer.Text, tbSQLInstance.Text);
+        }
+
+        private void btSQLRun_Click(object sender, EventArgs e)
+        {
+            if (!String.IsNullOrEmpty(tbSQLCommand.Text))
+            {
+                try
+                {
+                    gvSQLData.DataSource = sqlServer.EjecutarConsulta(tbSQLCommand.Text).Tables[0].DefaultView;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
     }
 }
