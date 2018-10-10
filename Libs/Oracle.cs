@@ -20,6 +20,9 @@ namespace DataBaseNet
 {
     public class DBOracle
     {
+        public delegate void StatusConnection(String message);
+        public event StatusConnection ConnectionMessage;
+        
         private OracleConnection connection;
         private OracleCommand command;
         private OracleTransaction transaction;
@@ -88,6 +91,8 @@ namespace DataBaseNet
             }
             catch(Exception ex)
             {
+                ConnectionMessage(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss - ") + ex.Message);
+
                 return new DataSet();
             }
         }
@@ -141,8 +146,10 @@ namespace DataBaseNet
                     command.ExecuteNonQuery();
                     transaction.Commit();
                 }
-                catch (Exception Excepcion)
+                catch (Exception ex)
                 {
+                    ConnectionMessage(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss - ") + ex.Message);
+
                     transaction.Rollback();
 
                     return false;

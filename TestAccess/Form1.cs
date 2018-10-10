@@ -61,6 +61,13 @@ namespace DataBasesTest
         private void btTestConnection_Click(object sender, EventArgs e)
         {
             oracleDB = new DBOracle(tbUser.Text, tbPassword.Text, tbWorkspace.Text, tbServer.Text, int.Parse(tbPort.Text));
+
+            oracleDB.ConnectionMessage += oracleDB_ConnectionMessage;
+        }
+
+        void oracleDB_ConnectionMessage(string message)
+        {
+            tbMessages.AppendText(message + Environment.NewLine);
         }
 
         private void btOracleRun_Click(object sender, EventArgs e)
@@ -81,6 +88,16 @@ namespace DataBasesTest
         private void btClose_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btClear_Click(object sender, EventArgs e)
+        {
+            tbMessages.Clear();
+        }
+
+        private void btConnection_Click(object sender, EventArgs e)
+        {
+            tbMessages.AppendText(oracleDB.ConnectionString() + Environment.NewLine);
         }
     }
 }
