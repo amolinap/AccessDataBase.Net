@@ -1,4 +1,17 @@
-﻿using System;
+﻿/**
+ * @file:   Oracle.cs
+ * @author: Alejandro Molina Pulido
+ * @email:  am.alex09@gmail.com
+ * @date:   Octubre 2018
+ * @brief:  This file exposes the global connection to Oracle XE 11g database.
+ */
+
+/*
+ * Oracle XE 11g            11.2.0.2.0
+ * Oracle.DataAccess.dll    v4.112.2.0    Runtime v4.0.30319
+ */
+
+using System;
 using System.Text;
 using System.Data;
 using Oracle.DataAccess.Client;

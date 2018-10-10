@@ -23,3 +23,6 @@ SELECT instance FROM v$thread;
 
 -- Cambiar de Workspace
 ALTER SESSION SET CURRENT_SCHEMA = TESTDATABASE;
+
+-- Ver versiones
+SELECT * FROM PRODUCT_COMPONENT_VERSION;
