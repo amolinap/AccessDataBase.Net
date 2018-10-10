@@ -57,11 +57,30 @@ namespace DataBasesTest
             }*/
         }
 
+        DBOracle oracleDB;
         private void btTestConnection_Click(object sender, EventArgs e)
         {
-            DBOracle mySQL = new DBOracle(tbUser.Text, tbPassword.Text, tbWorkspace.Text, tbServer.Text, int.Parse(tbPort.Text));
+            oracleDB = new DBOracle(tbUser.Text, tbPassword.Text, tbWorkspace.Text, tbServer.Text, int.Parse(tbPort.Text));
+        }
 
-            dataGridView1.DataSource = mySQL.RunQueryDataSet("select * from usuarios").Tables[0].DefaultView;
+        private void btOracleRun_Click(object sender, EventArgs e)
+        {
+            if (!String.IsNullOrEmpty(tbSQLOracle.Text))
+            {
+                try
+                {
+                    gvOracle.DataSource = oracleDB.RunQueryDataSet(tbSQLOracle.Text).Tables[0].DefaultView;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        private void btClose_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

@@ -78,5 +78,71 @@ namespace DataBaseNet
                 return new DataSet();
             }
         }
+
+        public string RunQueryParameter(string sql)
+        {
+            command.Connection = Connection();
+            command.CommandText = sql;
+
+            object resultado;
+
+            OpenConnection();
+            resultado = command.ExecuteScalar();
+            CloseConnection();
+
+            if (resultado == null)
+            {
+                resultado = string.Empty;
+            }
+
+            return resultado.ToString();
+        }
+
+        public DataTable RunQueryDataTable(string sql)
+        {
+            command.Connection = Connection();
+            command.CommandText = sql;
+
+            DataTable dTable = new DataTable();
+
+            OpenConnection();
+            dTable.Load(command.ExecuteReader());
+            CloseConnection();
+
+            return dTable;
+        }
+
+        public bool RunQueryCommand(string sql)
+        {
+            if (!string.IsNullOrEmpty(sql))
+            {
+                try
+                {
+                    command.Connection = Connection();
+                    command.CommandText = sql;
+
+                    OpenConnection();
+                    transaction = connection.BeginTransaction();
+
+                    command.Transaction = transaction;
+                    command.ExecuteNonQuery();
+                    transaction.Commit();
+                }
+                catch (Exception Excepcion)
+                {
+                    transaction.Rollback();
+
+                    return false;
+                }
+                finally
+                {
+                    CloseConnection();
+                }
+
+                return true;
+            }
+
+            return false;
+        }
     }
 }

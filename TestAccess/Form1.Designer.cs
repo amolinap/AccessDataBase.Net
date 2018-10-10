@@ -44,11 +44,19 @@
             this.tbUser = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btTestConnection = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btClose = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tbSQLOracle = new System.Windows.Forms.TextBox();
+            this.gvOracle = new System.Windows.Forms.DataGridView();
+            this.btOracleRun = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gvOracle)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -72,6 +80,9 @@
             // 
             // tabControl1
             // 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
@@ -94,17 +105,8 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.tbPort);
-            this.tabPage2.Controls.Add(this.label5);
-            this.tabPage2.Controls.Add(this.tbServer);
-            this.tabPage2.Controls.Add(this.label4);
-            this.tabPage2.Controls.Add(this.tbWorkspace);
-            this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Controls.Add(this.tbPassword);
-            this.tabPage2.Controls.Add(this.label2);
-            this.tabPage2.Controls.Add(this.tbUser);
-            this.tabPage2.Controls.Add(this.label1);
-            this.tabPage2.Controls.Add(this.btTestConnection);
+            this.tabPage2.Controls.Add(this.groupBox2);
+            this.tabPage2.Controls.Add(this.groupBox1);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -115,9 +117,9 @@
             // 
             // tbPort
             // 
-            this.tbPort.Location = new System.Drawing.Point(112, 140);
+            this.tbPort.Location = new System.Drawing.Point(777, 25);
             this.tbPort.Name = "tbPort";
-            this.tbPort.Size = new System.Drawing.Size(151, 22);
+            this.tbPort.Size = new System.Drawing.Size(98, 22);
             this.tbPort.TabIndex = 10;
             this.tbPort.Text = "1521";
             this.tbPort.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -125,7 +127,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(52, 143);
+            this.label5.Location = new System.Drawing.Point(717, 28);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(54, 17);
             this.label5.TabIndex = 9;
@@ -133,9 +135,9 @@
             // 
             // tbServer
             // 
-            this.tbServer.Location = new System.Drawing.Point(112, 112);
+            this.tbServer.Location = new System.Drawing.Point(613, 25);
             this.tbServer.Name = "tbServer";
-            this.tbServer.Size = new System.Drawing.Size(151, 22);
+            this.tbServer.Size = new System.Drawing.Size(98, 22);
             this.tbServer.TabIndex = 8;
             this.tbServer.Text = "localhost";
             this.tbServer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -143,7 +145,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(52, 115);
+            this.label4.Location = new System.Drawing.Point(553, 28);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 17);
             this.label4.TabIndex = 7;
@@ -151,9 +153,9 @@
             // 
             // tbWorkspace
             // 
-            this.tbWorkspace.Location = new System.Drawing.Point(112, 84);
+            this.tbWorkspace.Location = new System.Drawing.Point(449, 25);
             this.tbWorkspace.Name = "tbWorkspace";
-            this.tbWorkspace.Size = new System.Drawing.Size(151, 22);
+            this.tbWorkspace.Size = new System.Drawing.Size(98, 22);
             this.tbWorkspace.TabIndex = 6;
             this.tbWorkspace.Text = "XE";
             this.tbWorkspace.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -161,7 +163,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 87);
+            this.label3.Location = new System.Drawing.Point(360, 28);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(83, 17);
             this.label3.TabIndex = 5;
@@ -169,9 +171,9 @@
             // 
             // tbPassword
             // 
-            this.tbPassword.Location = new System.Drawing.Point(112, 56);
+            this.tbPassword.Location = new System.Drawing.Point(256, 25);
             this.tbPassword.Name = "tbPassword";
-            this.tbPassword.Size = new System.Drawing.Size(151, 22);
+            this.tbPassword.Size = new System.Drawing.Size(98, 22);
             this.tbPassword.TabIndex = 4;
             this.tbPassword.Text = "admin1234";
             this.tbPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -179,7 +181,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(33, 59);
+            this.label2.Location = new System.Drawing.Point(177, 28);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 17);
             this.label2.TabIndex = 3;
@@ -187,9 +189,9 @@
             // 
             // tbUser
             // 
-            this.tbUser.Location = new System.Drawing.Point(112, 28);
+            this.tbUser.Location = new System.Drawing.Point(73, 25);
             this.tbUser.Name = "tbUser";
-            this.tbUser.Size = new System.Drawing.Size(151, 22);
+            this.tbUser.Size = new System.Drawing.Size(98, 22);
             this.tbUser.TabIndex = 2;
             this.tbUser.Text = "Admin";
             this.tbUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -197,7 +199,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(45, 31);
+            this.label1.Location = new System.Drawing.Point(6, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(61, 17);
             this.label1.TabIndex = 1;
@@ -205,7 +207,8 @@
             // 
             // btTestConnection
             // 
-            this.btTestConnection.Location = new System.Drawing.Point(126, 168);
+            this.btTestConnection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btTestConnection.Location = new System.Drawing.Point(738, 53);
             this.btTestConnection.Name = "btTestConnection";
             this.btTestConnection.Size = new System.Drawing.Size(137, 23);
             this.btTestConnection.TabIndex = 0;
@@ -213,30 +216,104 @@
             this.btTestConnection.UseVisualStyleBackColor = true;
             this.btTestConnection.Click += new System.EventHandler(this.btTestConnection_Click);
             // 
-            // button2
+            // btClose
             // 
-            this.button2.Location = new System.Drawing.Point(891, 529);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btClose.Location = new System.Drawing.Point(891, 529);
+            this.btClose.Name = "btClose";
+            this.btClose.Size = new System.Drawing.Size(75, 23);
+            this.btClose.TabIndex = 3;
+            this.btClose.Text = "Cerrar";
+            this.btClose.UseVisualStyleBackColor = true;
+            this.btClose.Click += new System.EventHandler(this.btClose_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.btTestConnection);
+            this.groupBox1.Controls.Add(this.tbPort);
+            this.groupBox1.Controls.Add(this.tbUser);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.tbServer);
+            this.groupBox1.Controls.Add(this.tbPassword);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.tbWorkspace);
+            this.groupBox1.Location = new System.Drawing.Point(6, 6);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(934, 88);
+            this.groupBox1.TabIndex = 11;
+            this.groupBox1.TabStop = false;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.btOracleRun);
+            this.groupBox2.Controls.Add(this.gvOracle);
+            this.groupBox2.Controls.Add(this.tbSQLOracle);
+            this.groupBox2.Location = new System.Drawing.Point(6, 100);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(934, 376);
+            this.groupBox2.TabIndex = 12;
+            this.groupBox2.TabStop = false;
+            // 
+            // tbSQLOracle
+            // 
+            this.tbSQLOracle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbSQLOracle.Location = new System.Drawing.Point(6, 21);
+            this.tbSQLOracle.Multiline = true;
+            this.tbSQLOracle.Name = "tbSQLOracle";
+            this.tbSQLOracle.Size = new System.Drawing.Size(832, 91);
+            this.tbSQLOracle.TabIndex = 0;
+            // 
+            // gvOracle
+            // 
+            this.gvOracle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gvOracle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvOracle.Location = new System.Drawing.Point(6, 118);
+            this.gvOracle.Name = "gvOracle";
+            this.gvOracle.RowTemplate.Height = 24;
+            this.gvOracle.Size = new System.Drawing.Size(832, 252);
+            this.gvOracle.TabIndex = 1;
+            // 
+            // btOracleRun
+            // 
+            this.btOracleRun.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btOracleRun.Location = new System.Drawing.Point(844, 89);
+            this.btOracleRun.Name = "btOracleRun";
+            this.btOracleRun.Size = new System.Drawing.Size(84, 23);
+            this.btOracleRun.TabIndex = 2;
+            this.btOracleRun.Text = "Ejecutar";
+            this.btOracleRun.UseVisualStyleBackColor = true;
+            this.btOracleRun.Click += new System.EventHandler(this.btOracleRun_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(978, 564);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btClose);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Test Base de Datos";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gvOracle)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -248,7 +325,7 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btClose;
         private System.Windows.Forms.TextBox tbServer;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbWorkspace;
@@ -260,6 +337,11 @@
         private System.Windows.Forms.Button btTestConnection;
         private System.Windows.Forms.TextBox tbPort;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btOracleRun;
+        private System.Windows.Forms.DataGridView gvOracle;
+        private System.Windows.Forms.TextBox tbSQLOracle;
     }
 }
 
