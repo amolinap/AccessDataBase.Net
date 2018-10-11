@@ -151,5 +151,38 @@ namespace DataBasesTest
         {
             tbMySQLMessages.AppendText(mySQL.ConnectionString() + Environment.NewLine);
         }
+
+        DBPostgreSQL postgreSQL;
+        private void btPostConnect_Click(object sender, EventArgs e)
+        {
+            postgreSQL = new DBPostgreSQL(tbPostUser.Text, tbPostPassword.Text, tbPostDataBase.Text, tbPostServer.Text, int.Parse(tbPostPort.Text));
+
+            postgreSQL.ConnectionMessage += postgreSQL_ConnectionMessage;
+        }
+
+        void postgreSQL_ConnectionMessage(string message)
+        {
+            tbPostMessages.AppendText(message + Environment.NewLine);
+        }
+
+        private void btPostRun_Click(object sender, EventArgs e)
+        {
+            if (!String.IsNullOrEmpty(tbPostCommand.Text))
+            {
+                try
+                {
+                    gvPostData.DataSource = postgreSQL.RunQueryDataSet(tbPostCommand.Text).Tables[0].DefaultView;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        private void btPostConnection_Click(object sender, EventArgs e)
+        {
+            tbPostMessages.AppendText(postgreSQL.ConnectionString() + Environment.NewLine);
+        }
     }
 }

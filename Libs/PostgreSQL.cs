@@ -21,6 +21,9 @@ namespace DataBaseNet
 {
     public class DBPostgreSQL
     {
+        public delegate void StatusConnection(String message);
+        public event StatusConnection ConnectionMessage;
+
         private NpgsqlConnection connection;
         private NpgsqlCommand command;
         private NpgsqlTransaction transaction;
@@ -84,8 +87,10 @@ namespace DataBaseNet
 
                 return dSet;
             }
-            catch
+            catch (Exception ex)
             {
+                ConnectionMessage(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss - ") + ex.Message);
+
                 return new DataSet();
             }
         }
