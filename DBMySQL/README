@@ -9,14 +9,14 @@ Framework 4.5.2
 
 Descargar e Instalar MySQL
 - https://dev.mysql.com/downloads/windows/installer/8.0.html
-- https://dev.mysql.com/get/Downloads/MySQLInstaller/mysql-installer-community-8.0.12.0.msi
+- https://dev.mysql.com/get/Downloads/MySQLInstaller/mysql-installer-community-5.7.23.0.msi
 
 Type and Networking
 - Config Type: Development Computer
 - TCP/IP Port: 3306, X Protocol Port: 33060
 
 Cuentas
-- Root/Admin1234#
+- Root/admin1234
 - MySQL User Admin/admin1234
 
 Crear Schema

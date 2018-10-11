@@ -1,6 +1,3 @@
-drop table usuarios;
-
-select * from usuarios;
 
 CREATE TABLE IF NOT EXISTS usuarios (
     id_usu INT NOT NULL,

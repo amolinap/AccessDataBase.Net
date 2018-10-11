@@ -27,13 +27,16 @@ namespace DataBaseNet
 {
     public class DBMySQL
     {
+        public delegate void StatusConnection(String message);
+        public event StatusConnection ConnectionMessage;
+
         private MySqlConnection connection;
         private MySqlCommand command;
         private MySqlTransaction transaction;
 
         public DBMySQL(string user, string pass, string db_name, string server, int port = 3306)
         {
-            connection = new MySqlConnection("server=" + server + ";port=" + port + ";user id=" + user + ";password=" + pass + ";database=" + db_name + ";");
+            connection = new MySqlConnection("server=" + server + ";port=" + port + ";user id=" + user + ";password=" + pass + ";database=" + db_name + ";sslmode=none;persistsecurityinfo=True;");
             transaction = null;
             command = new MySqlCommand();
         }
@@ -90,8 +93,10 @@ namespace DataBaseNet
 
                 return dSet;
             }
-            catch
+            catch (Exception ex)
             {
+                ConnectionMessage(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss - ") + ex.Message);
+
                 return new DataSet();
             }
         }

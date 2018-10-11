@@ -26,9 +26,7 @@ namespace DataBasesTest
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DBMySQL mySQL = new DBMySQL("molina", "password", "testdb", "192.168.0.18");
-
-            dataGridView1.DataSource = mySQL.RunQueryDataSet("select * from personas;").Tables[0].DefaultView;
+            
 
             /*MySqlConnectionStringBuilder conn_string = new MySqlConnectionStringBuilder();
             conn_string.Server = "192.168.0.18";
@@ -119,6 +117,39 @@ namespace DataBasesTest
                     MessageBox.Show(ex.Message);
                 }
             }
+        }
+
+        DBMySQL mySQL;
+        private void btMySQLConnect_Click(object sender, EventArgs e)
+        {
+            mySQL = new DBMySQL(tbMySQLUser.Text, tbMySQLPassword.Text, tbMySQLDataBase.Text, tbMySQLServer.Text, int.Parse(tbMySQLPort.Text));
+
+            mySQL.ConnectionMessage += mySQL_ConnectionMessage;
+        }
+
+        void mySQL_ConnectionMessage(string message)
+        {
+            tbMySQLMessages.AppendText(message + Environment.NewLine);
+        }
+
+        private void btMySQLRun_Click(object sender, EventArgs e)
+        {
+            if (!String.IsNullOrEmpty(tbMySQLCommand.Text))
+            {
+                try
+                {
+                    gvMySQLData.DataSource = mySQL.RunQueryDataSet(tbMySQLCommand.Text).Tables[0].DefaultView;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        private void btMySQLConnection_Click(object sender, EventArgs e)
+        {
+            tbMySQLMessages.AppendText(mySQL.ConnectionString() + Environment.NewLine);
         }
     }
 }

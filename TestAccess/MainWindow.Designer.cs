@@ -28,9 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.tbSQLMessages = new System.Windows.Forms.TextBox();
+            this.btSQLRun = new System.Windows.Forms.Button();
+            this.gvSQLData = new System.Windows.Forms.DataGridView();
+            this.tbSQLCommand = new System.Windows.Forms.TextBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btSQLConnect = new System.Windows.Forms.Button();
+            this.tbSQLCatalog = new System.Windows.Forms.TextBox();
+            this.tbSQLUser = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tbSQLServer = new System.Windows.Forms.TextBox();
+            this.tbSQLPassword = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.tbSQLInstance = new System.Windows.Forms.TextBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -53,57 +71,39 @@
             this.label3 = new System.Windows.Forms.Label();
             this.tbWorkspace = new System.Windows.Forms.TextBox();
             this.btClose = new System.Windows.Forms.Button();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.tbSQLMessages = new System.Windows.Forms.TextBox();
-            this.btSQLRun = new System.Windows.Forms.Button();
-            this.gvSQLData = new System.Windows.Forms.DataGridView();
-            this.tbSQLCommand = new System.Windows.Forms.TextBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.btSQLConnect = new System.Windows.Forms.Button();
-            this.tbSQLCatalog = new System.Windows.Forms.TextBox();
-            this.tbSQLUser = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.tbSQLServer = new System.Windows.Forms.TextBox();
-            this.tbSQLPassword = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.tbSQLInstance = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.btMySQLConnection = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.tbMySQLMessages = new System.Windows.Forms.TextBox();
+            this.btMySQLRun = new System.Windows.Forms.Button();
+            this.gvMySQLData = new System.Windows.Forms.DataGridView();
+            this.tbMySQLCommand = new System.Windows.Forms.TextBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.btMySQLConnect = new System.Windows.Forms.Button();
+            this.tbMySQLUser = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.tbMySQLServer = new System.Windows.Forms.TextBox();
+            this.tbMySQLPassword = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.tbMySQLDataBase = new System.Windows.Forms.TextBox();
+            this.tbMySQLPort = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gvSQLData)).BeginInit();
+            this.groupBox4.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvOracle)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gvSQLData)).BeginInit();
-            this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gvMySQLData)).BeginInit();
+            this.groupBox6.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 6);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(494, 209);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(425, 221);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // tabControl1
             // 
@@ -119,16 +119,232 @@
             this.tabControl1.Size = new System.Drawing.Size(954, 511);
             this.tabControl1.TabIndex = 0;
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.groupBox3);
+            this.tabPage3.Controls.Add(this.groupBox4);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(946, 482);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "SQL Express";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.Controls.Add(this.button2);
+            this.groupBox3.Controls.Add(this.button3);
+            this.groupBox3.Controls.Add(this.tbSQLMessages);
+            this.groupBox3.Controls.Add(this.btSQLRun);
+            this.groupBox3.Controls.Add(this.gvSQLData);
+            this.groupBox3.Controls.Add(this.tbSQLCommand);
+            this.groupBox3.Location = new System.Drawing.Point(6, 100);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(934, 376);
+            this.groupBox3.TabIndex = 14;
+            this.groupBox3.TabStop = false;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.Location = new System.Drawing.Point(844, 142);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(84, 23);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Conexión";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.Location = new System.Drawing.Point(844, 171);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(84, 23);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Limpiar";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // tbSQLMessages
+            // 
+            this.tbSQLMessages.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbSQLMessages.Location = new System.Drawing.Point(6, 118);
+            this.tbSQLMessages.Multiline = true;
+            this.tbSQLMessages.Name = "tbSQLMessages";
+            this.tbSQLMessages.ReadOnly = true;
+            this.tbSQLMessages.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbSQLMessages.Size = new System.Drawing.Size(832, 76);
+            this.tbSQLMessages.TabIndex = 3;
+            // 
+            // btSQLRun
+            // 
+            this.btSQLRun.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btSQLRun.Location = new System.Drawing.Point(844, 89);
+            this.btSQLRun.Name = "btSQLRun";
+            this.btSQLRun.Size = new System.Drawing.Size(84, 23);
+            this.btSQLRun.TabIndex = 2;
+            this.btSQLRun.Text = "Ejecutar";
+            this.btSQLRun.UseVisualStyleBackColor = true;
+            this.btSQLRun.Click += new System.EventHandler(this.btSQLRun_Click);
+            // 
+            // gvSQLData
+            // 
+            this.gvSQLData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gvSQLData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvSQLData.Location = new System.Drawing.Point(6, 200);
+            this.gvSQLData.Name = "gvSQLData";
+            this.gvSQLData.RowTemplate.Height = 24;
+            this.gvSQLData.Size = new System.Drawing.Size(832, 170);
+            this.gvSQLData.TabIndex = 1;
+            // 
+            // tbSQLCommand
+            // 
+            this.tbSQLCommand.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbSQLCommand.Location = new System.Drawing.Point(6, 21);
+            this.tbSQLCommand.Multiline = true;
+            this.tbSQLCommand.Name = "tbSQLCommand";
+            this.tbSQLCommand.Size = new System.Drawing.Size(832, 91);
+            this.tbSQLCommand.TabIndex = 0;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox4.Controls.Add(this.label6);
+            this.groupBox4.Controls.Add(this.btSQLConnect);
+            this.groupBox4.Controls.Add(this.tbSQLCatalog);
+            this.groupBox4.Controls.Add(this.tbSQLUser);
+            this.groupBox4.Controls.Add(this.label7);
+            this.groupBox4.Controls.Add(this.label8);
+            this.groupBox4.Controls.Add(this.tbSQLServer);
+            this.groupBox4.Controls.Add(this.tbSQLPassword);
+            this.groupBox4.Controls.Add(this.label9);
+            this.groupBox4.Controls.Add(this.label10);
+            this.groupBox4.Controls.Add(this.tbSQLInstance);
+            this.groupBox4.Location = new System.Drawing.Point(6, 6);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(934, 88);
+            this.groupBox4.TabIndex = 13;
+            this.groupBox4.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 28);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(61, 17);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Usuario:";
+            // 
+            // btSQLConnect
+            // 
+            this.btSQLConnect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btSQLConnect.Location = new System.Drawing.Point(765, 53);
+            this.btSQLConnect.Name = "btSQLConnect";
+            this.btSQLConnect.Size = new System.Drawing.Size(98, 23);
+            this.btSQLConnect.TabIndex = 0;
+            this.btSQLConnect.Text = "Conectar";
+            this.btSQLConnect.UseVisualStyleBackColor = true;
+            this.btSQLConnect.Click += new System.EventHandler(this.btSQLConnect_Click);
+            // 
+            // tbSQLCatalog
+            // 
+            this.tbSQLCatalog.Location = new System.Drawing.Point(765, 25);
+            this.tbSQLCatalog.Name = "tbSQLCatalog";
+            this.tbSQLCatalog.Size = new System.Drawing.Size(98, 22);
+            this.tbSQLCatalog.TabIndex = 10;
+            this.tbSQLCatalog.Text = "TestSQLExpress";
+            this.tbSQLCatalog.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tbSQLUser
+            // 
+            this.tbSQLUser.Location = new System.Drawing.Point(73, 25);
+            this.tbSQLUser.Name = "tbSQLUser";
+            this.tbSQLUser.Size = new System.Drawing.Size(98, 22);
+            this.tbSQLUser.TabIndex = 2;
+            this.tbSQLUser.Text = "sa";
+            this.tbSQLUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(699, 28);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(60, 17);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "Catalog:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(177, 28);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(73, 17);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "Password:";
+            // 
+            // tbSQLServer
+            // 
+            this.tbSQLServer.Location = new System.Drawing.Point(420, 25);
+            this.tbSQLServer.Name = "tbSQLServer";
+            this.tbSQLServer.Size = new System.Drawing.Size(98, 22);
+            this.tbSQLServer.TabIndex = 8;
+            this.tbSQLServer.Text = "localhost";
+            this.tbSQLServer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tbSQLPassword
+            // 
+            this.tbSQLPassword.Location = new System.Drawing.Point(256, 25);
+            this.tbSQLPassword.Name = "tbSQLPassword";
+            this.tbSQLPassword.Size = new System.Drawing.Size(98, 22);
+            this.tbSQLPassword.TabIndex = 4;
+            this.tbSQLPassword.Text = "admin1234";
+            this.tbSQLPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(360, 28);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(54, 17);
+            this.label9.TabIndex = 7;
+            this.label9.Text = "Server:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(524, 28);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(65, 17);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "Instance:";
+            // 
+            // tbSQLInstance
+            // 
+            this.tbSQLInstance.Location = new System.Drawing.Point(595, 25);
+            this.tbSQLInstance.Name = "tbSQLInstance";
+            this.tbSQLInstance.Size = new System.Drawing.Size(98, 22);
+            this.tbSQLInstance.TabIndex = 6;
+            this.tbSQLInstance.Text = "MSSQLSERVER";
+            this.tbSQLInstance.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.dataGridView1);
-            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.groupBox5);
+            this.tabPage1.Controls.Add(this.groupBox6);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(946, 482);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "MySQL";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabPage2
@@ -360,234 +576,228 @@
             this.btClose.UseVisualStyleBackColor = true;
             this.btClose.Click += new System.EventHandler(this.btClose_Click);
             // 
-            // tabPage3
+            // groupBox5
             // 
-            this.tabPage3.Controls.Add(this.groupBox3);
-            this.tabPage3.Controls.Add(this.groupBox4);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(946, 482);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "SQL Express";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.Controls.Add(this.button2);
-            this.groupBox3.Controls.Add(this.button3);
-            this.groupBox3.Controls.Add(this.tbSQLMessages);
-            this.groupBox3.Controls.Add(this.btSQLRun);
-            this.groupBox3.Controls.Add(this.gvSQLData);
-            this.groupBox3.Controls.Add(this.tbSQLCommand);
-            this.groupBox3.Location = new System.Drawing.Point(6, 100);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(934, 376);
-            this.groupBox3.TabIndex = 14;
-            this.groupBox3.TabStop = false;
+            this.groupBox5.Controls.Add(this.btMySQLConnection);
+            this.groupBox5.Controls.Add(this.button4);
+            this.groupBox5.Controls.Add(this.tbMySQLMessages);
+            this.groupBox5.Controls.Add(this.btMySQLRun);
+            this.groupBox5.Controls.Add(this.gvMySQLData);
+            this.groupBox5.Controls.Add(this.tbMySQLCommand);
+            this.groupBox5.Location = new System.Drawing.Point(6, 100);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(934, 376);
+            this.groupBox5.TabIndex = 16;
+            this.groupBox5.TabStop = false;
             // 
-            // button2
+            // btMySQLConnection
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(844, 142);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(84, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Conexión";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btMySQLConnection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btMySQLConnection.Location = new System.Drawing.Point(844, 142);
+            this.btMySQLConnection.Name = "btMySQLConnection";
+            this.btMySQLConnection.Size = new System.Drawing.Size(84, 23);
+            this.btMySQLConnection.TabIndex = 5;
+            this.btMySQLConnection.Text = "Conexión";
+            this.btMySQLConnection.UseVisualStyleBackColor = true;
+            this.btMySQLConnection.Click += new System.EventHandler(this.btMySQLConnection_Click);
             // 
-            // button3
+            // button4
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(844, 171);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(84, 23);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Limpiar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button4.Location = new System.Drawing.Point(844, 171);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(84, 23);
+            this.button4.TabIndex = 4;
+            this.button4.Text = "Limpiar";
+            this.button4.UseVisualStyleBackColor = true;
             // 
-            // tbSQLMessages
+            // tbMySQLMessages
             // 
-            this.tbSQLMessages.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tbMySQLMessages.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbSQLMessages.Location = new System.Drawing.Point(6, 118);
-            this.tbSQLMessages.Multiline = true;
-            this.tbSQLMessages.Name = "tbSQLMessages";
-            this.tbSQLMessages.ReadOnly = true;
-            this.tbSQLMessages.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbSQLMessages.Size = new System.Drawing.Size(832, 76);
-            this.tbSQLMessages.TabIndex = 3;
+            this.tbMySQLMessages.Location = new System.Drawing.Point(6, 118);
+            this.tbMySQLMessages.Multiline = true;
+            this.tbMySQLMessages.Name = "tbMySQLMessages";
+            this.tbMySQLMessages.ReadOnly = true;
+            this.tbMySQLMessages.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbMySQLMessages.Size = new System.Drawing.Size(832, 76);
+            this.tbMySQLMessages.TabIndex = 3;
             // 
-            // btSQLRun
+            // btMySQLRun
             // 
-            this.btSQLRun.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btSQLRun.Location = new System.Drawing.Point(844, 89);
-            this.btSQLRun.Name = "btSQLRun";
-            this.btSQLRun.Size = new System.Drawing.Size(84, 23);
-            this.btSQLRun.TabIndex = 2;
-            this.btSQLRun.Text = "Ejecutar";
-            this.btSQLRun.UseVisualStyleBackColor = true;
-            this.btSQLRun.Click += new System.EventHandler(this.btSQLRun_Click);
+            this.btMySQLRun.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btMySQLRun.Location = new System.Drawing.Point(844, 89);
+            this.btMySQLRun.Name = "btMySQLRun";
+            this.btMySQLRun.Size = new System.Drawing.Size(84, 23);
+            this.btMySQLRun.TabIndex = 2;
+            this.btMySQLRun.Text = "Ejecutar";
+            this.btMySQLRun.UseVisualStyleBackColor = true;
+            this.btMySQLRun.Click += new System.EventHandler(this.btMySQLRun_Click);
             // 
-            // gvSQLData
+            // gvMySQLData
             // 
-            this.gvSQLData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.gvMySQLData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gvSQLData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvSQLData.Location = new System.Drawing.Point(6, 200);
-            this.gvSQLData.Name = "gvSQLData";
-            this.gvSQLData.RowTemplate.Height = 24;
-            this.gvSQLData.Size = new System.Drawing.Size(832, 170);
-            this.gvSQLData.TabIndex = 1;
+            this.gvMySQLData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvMySQLData.Location = new System.Drawing.Point(6, 200);
+            this.gvMySQLData.Name = "gvMySQLData";
+            this.gvMySQLData.RowTemplate.Height = 24;
+            this.gvMySQLData.Size = new System.Drawing.Size(832, 170);
+            this.gvMySQLData.TabIndex = 1;
             // 
-            // tbSQLCommand
+            // tbMySQLCommand
             // 
-            this.tbSQLCommand.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tbMySQLCommand.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbSQLCommand.Location = new System.Drawing.Point(6, 21);
-            this.tbSQLCommand.Multiline = true;
-            this.tbSQLCommand.Name = "tbSQLCommand";
-            this.tbSQLCommand.Size = new System.Drawing.Size(832, 91);
-            this.tbSQLCommand.TabIndex = 0;
+            this.tbMySQLCommand.Location = new System.Drawing.Point(6, 21);
+            this.tbMySQLCommand.Multiline = true;
+            this.tbMySQLCommand.Name = "tbMySQLCommand";
+            this.tbMySQLCommand.Size = new System.Drawing.Size(832, 91);
+            this.tbMySQLCommand.TabIndex = 0;
             // 
-            // groupBox4
+            // groupBox6
             // 
-            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.groupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox4.Controls.Add(this.label6);
-            this.groupBox4.Controls.Add(this.btSQLConnect);
-            this.groupBox4.Controls.Add(this.tbSQLCatalog);
-            this.groupBox4.Controls.Add(this.tbSQLUser);
-            this.groupBox4.Controls.Add(this.label7);
-            this.groupBox4.Controls.Add(this.label8);
-            this.groupBox4.Controls.Add(this.tbSQLServer);
-            this.groupBox4.Controls.Add(this.tbSQLPassword);
-            this.groupBox4.Controls.Add(this.label9);
-            this.groupBox4.Controls.Add(this.label10);
-            this.groupBox4.Controls.Add(this.tbSQLInstance);
-            this.groupBox4.Location = new System.Drawing.Point(6, 6);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(934, 88);
-            this.groupBox4.TabIndex = 13;
-            this.groupBox4.TabStop = false;
+            this.groupBox6.Controls.Add(this.tbMySQLPort);
+            this.groupBox6.Controls.Add(this.label12);
+            this.groupBox6.Controls.Add(this.label11);
+            this.groupBox6.Controls.Add(this.btMySQLConnect);
+            this.groupBox6.Controls.Add(this.tbMySQLUser);
+            this.groupBox6.Controls.Add(this.label13);
+            this.groupBox6.Controls.Add(this.tbMySQLServer);
+            this.groupBox6.Controls.Add(this.tbMySQLPassword);
+            this.groupBox6.Controls.Add(this.label14);
+            this.groupBox6.Controls.Add(this.label15);
+            this.groupBox6.Controls.Add(this.tbMySQLDataBase);
+            this.groupBox6.Location = new System.Drawing.Point(6, 6);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(934, 88);
+            this.groupBox6.TabIndex = 15;
+            this.groupBox6.TabStop = false;
             // 
-            // label6
+            // label11
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 28);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 17);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Usuario:";
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(6, 28);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(61, 17);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "Usuario:";
             // 
-            // btSQLConnect
+            // btMySQLConnect
             // 
-            this.btSQLConnect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btSQLConnect.Location = new System.Drawing.Point(765, 53);
-            this.btSQLConnect.Name = "btSQLConnect";
-            this.btSQLConnect.Size = new System.Drawing.Size(98, 23);
-            this.btSQLConnect.TabIndex = 0;
-            this.btSQLConnect.Text = "Conectar";
-            this.btSQLConnect.UseVisualStyleBackColor = true;
-            this.btSQLConnect.Click += new System.EventHandler(this.btSQLConnect_Click);
+            this.btMySQLConnect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btMySQLConnect.Location = new System.Drawing.Point(752, 53);
+            this.btMySQLConnect.Name = "btMySQLConnect";
+            this.btMySQLConnect.Size = new System.Drawing.Size(98, 23);
+            this.btMySQLConnect.TabIndex = 0;
+            this.btMySQLConnect.Text = "Conectar";
+            this.btMySQLConnect.UseVisualStyleBackColor = true;
+            this.btMySQLConnect.Click += new System.EventHandler(this.btMySQLConnect_Click);
             // 
-            // tbSQLCatalog
+            // tbMySQLUser
             // 
-            this.tbSQLCatalog.Location = new System.Drawing.Point(765, 25);
-            this.tbSQLCatalog.Name = "tbSQLCatalog";
-            this.tbSQLCatalog.Size = new System.Drawing.Size(98, 22);
-            this.tbSQLCatalog.TabIndex = 10;
-            this.tbSQLCatalog.Text = "TestSQLExpress";
-            this.tbSQLCatalog.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbMySQLUser.Location = new System.Drawing.Point(73, 25);
+            this.tbMySQLUser.Name = "tbMySQLUser";
+            this.tbMySQLUser.Size = new System.Drawing.Size(98, 22);
+            this.tbMySQLUser.TabIndex = 2;
+            this.tbMySQLUser.Text = "Admin";
+            this.tbMySQLUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // tbSQLUser
+            // label13
             // 
-            this.tbSQLUser.Location = new System.Drawing.Point(73, 25);
-            this.tbSQLUser.Name = "tbSQLUser";
-            this.tbSQLUser.Size = new System.Drawing.Size(98, 22);
-            this.tbSQLUser.TabIndex = 2;
-            this.tbSQLUser.Text = "sa";
-            this.tbSQLUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(177, 28);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(73, 17);
+            this.label13.TabIndex = 3;
+            this.label13.Text = "Password:";
             // 
-            // label7
+            // tbMySQLServer
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(699, 28);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(60, 17);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "Catalog:";
+            this.tbMySQLServer.Location = new System.Drawing.Point(420, 25);
+            this.tbMySQLServer.Name = "tbMySQLServer";
+            this.tbMySQLServer.Size = new System.Drawing.Size(98, 22);
+            this.tbMySQLServer.TabIndex = 8;
+            this.tbMySQLServer.Text = "127.0.0.1";
+            this.tbMySQLServer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label8
+            // tbMySQLPassword
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(177, 28);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(73, 17);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "Password:";
+            this.tbMySQLPassword.Location = new System.Drawing.Point(256, 25);
+            this.tbMySQLPassword.Name = "tbMySQLPassword";
+            this.tbMySQLPassword.Size = new System.Drawing.Size(98, 22);
+            this.tbMySQLPassword.TabIndex = 4;
+            this.tbMySQLPassword.Text = "admin1234";
+            this.tbMySQLPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // tbSQLServer
+            // label14
             // 
-            this.tbSQLServer.Location = new System.Drawing.Point(420, 25);
-            this.tbSQLServer.Name = "tbSQLServer";
-            this.tbSQLServer.Size = new System.Drawing.Size(98, 22);
-            this.tbSQLServer.TabIndex = 8;
-            this.tbSQLServer.Text = "localhost";
-            this.tbSQLServer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(360, 28);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(54, 17);
+            this.label14.TabIndex = 7;
+            this.label14.Text = "Server:";
             // 
-            // tbSQLPassword
+            // label15
             // 
-            this.tbSQLPassword.Location = new System.Drawing.Point(256, 25);
-            this.tbSQLPassword.Name = "tbSQLPassword";
-            this.tbSQLPassword.Size = new System.Drawing.Size(98, 22);
-            this.tbSQLPassword.TabIndex = 4;
-            this.tbSQLPassword.Text = "admin1234";
-            this.tbSQLPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(524, 28);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(74, 17);
+            this.label15.TabIndex = 5;
+            this.label15.Text = "DataBase:";
             // 
-            // label9
+            // tbMySQLDataBase
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(360, 28);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(54, 17);
-            this.label9.TabIndex = 7;
-            this.label9.Text = "Server:";
+            this.tbMySQLDataBase.Location = new System.Drawing.Point(604, 25);
+            this.tbMySQLDataBase.Name = "tbMySQLDataBase";
+            this.tbMySQLDataBase.Size = new System.Drawing.Size(98, 22);
+            this.tbMySQLDataBase.TabIndex = 6;
+            this.tbMySQLDataBase.Text = "TestMySQL";
+            this.tbMySQLDataBase.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label10
+            // tbMySQLPort
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(524, 28);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(65, 17);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "Instance:";
+            this.tbMySQLPort.Location = new System.Drawing.Point(752, 25);
+            this.tbMySQLPort.Name = "tbMySQLPort";
+            this.tbMySQLPort.Size = new System.Drawing.Size(98, 22);
+            this.tbMySQLPort.TabIndex = 12;
+            this.tbMySQLPort.Text = "3306";
+            this.tbMySQLPort.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // tbSQLInstance
+            // label12
             // 
-            this.tbSQLInstance.Location = new System.Drawing.Point(595, 25);
-            this.tbSQLInstance.Name = "tbSQLInstance";
-            this.tbSQLInstance.Size = new System.Drawing.Size(98, 22);
-            this.tbSQLInstance.TabIndex = 6;
-            this.tbSQLInstance.Text = "MSSQLSERVER";
-            this.tbSQLInstance.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(708, 28);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(38, 17);
+            this.label12.TabIndex = 11;
+            this.label12.Text = "Port:";
             // 
-            // Form1
+            // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(978, 564);
             this.Controls.Add(this.btClose);
             this.Controls.Add(this.tabControl1);
-            this.Name = "Form1";
+            this.Name = "MainWindow";
             this.Text = "Test Base de Datos";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabControl1.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gvSQLData)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
@@ -595,20 +805,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvOracle)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gvSQLData)).EndInit();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gvMySQLData)).EndInit();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
@@ -652,6 +859,25 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox tbSQLInstance;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Button btMySQLConnection;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox tbMySQLMessages;
+        private System.Windows.Forms.Button btMySQLRun;
+        private System.Windows.Forms.DataGridView gvMySQLData;
+        private System.Windows.Forms.TextBox tbMySQLCommand;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btMySQLConnect;
+        private System.Windows.Forms.TextBox tbMySQLUser;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox tbMySQLServer;
+        private System.Windows.Forms.TextBox tbMySQLPassword;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox tbMySQLDataBase;
+        private System.Windows.Forms.TextBox tbMySQLPort;
+        private System.Windows.Forms.Label label12;
     }
 }
 
