@@ -110,7 +110,7 @@ namespace DataBasesTest
             {
                 try
                 {
-                    gvSQLData.DataSource = sqlServer.EjecutarConsulta(tbSQLCommand.Text).Tables[0].DefaultView;
+                    gvSQLData.DataSource = sqlServer.RunQueryDataSet(tbSQLCommand.Text).Tables[0].DefaultView;
                 }
                 catch (Exception ex)
                 {

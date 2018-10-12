@@ -53,7 +53,7 @@ namespace DataBaseNet
             return connection.ConnectionString;
         }
 
-        private MySql.Data.MySqlClient.MySqlConnection Connection()
+        private MySqlConnection Connection()
         {
             return connection;
         }
@@ -150,8 +150,10 @@ namespace DataBaseNet
                     command.ExecuteNonQuery();
                     transaction.Commit();
                 }
-                catch (Exception Excepcion)
+                catch (Exception ex)
                 {
+                    ConnectionMessage(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss - ") + ex.Message);
+
                     transaction.Rollback();
 
                     return false;

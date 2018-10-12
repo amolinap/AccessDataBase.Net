@@ -7,139 +7,146 @@ namespace DataBaseNet
 {
     public class DBSQLServer
     {
-        private SqlConnection cadenaConexion;
-        private SqlCommand comando;
-        private SqlTransaction transaccion;
+        public delegate void StatusConnection(String message);
+        public event StatusConnection ConnectionMessage;
+
+        private SqlConnection connection;
+        private SqlCommand command;
+        private SqlTransaction transaction;
 
         public DBSQLServer(string usuario, string contrasena, string nombreBD, string servidor = "localhost", string instancia = "MSSQLSERVER")
         {
-            cadenaConexion = new SqlConnection("Data Source=" + servidor + "\\" + instancia + "; Initial Catalog=" + nombreBD + "; integrated security=false; User Id=sa; Password=" + contrasena + ";");
-            transaccion = null;
-            comando = new SqlCommand();
+            connection = new SqlConnection("Data Source=" + servidor + "\\" + instancia + "; Initial Catalog=" + nombreBD + "; integrated security=false; User Id=sa; Password=" + contrasena + ";");
+            transaction = null;
+            command = new SqlCommand();
         }
 
         public DBSQLServer(string conexion)
         {
-            cadenaConexion = new SqlConnection(conexion);
-            transaccion = null;
-            comando = new SqlCommand();
+            connection = new SqlConnection(conexion);
+            transaction = null;
+            command = new SqlCommand();
         }
 
-        private string CadenaConexion()
+        public string ConnectionString()
         {
-            return cadenaConexion.ToString();
+            return connection.ConnectionString;
         }
 
-        private SqlConnection LeerConexion()
+        private SqlConnection Connection()
         {
-            return cadenaConexion;
+            return connection;
         }
 
-        public void AbrirConexion()
+        private void OpenConnection()
         {
-            if (cadenaConexion.State == ConnectionState.Closed)
+            if (connection.State == ConnectionState.Closed)
             {
-                cadenaConexion.Open();
+                connection.Open();
             }
         }
 
-        public void CerrarConexion()
+        private void CloseConnection()
         {
-            if (cadenaConexion.State == ConnectionState.Open)
+            if (connection.State == ConnectionState.Open)
             {
-                cadenaConexion.Close();
+                connection.Close();
             }
         }
 
-        public DataSet EjecutarConsulta(string sql)
+        public DataSet RunQueryDataSet(string sql)
         {
             try
             {
-                comando.Connection = LeerConexion();
-                comando.CommandText = sql;
+                command.Connection = Connection();
+                command.CommandText = sql;
 
                 SqlDataAdapter dAdapter = new SqlDataAdapter();
-                dAdapter.SelectCommand = comando;
+                dAdapter.SelectCommand = command;
 
                 DataSet dSet = new DataSet();
                 dAdapter.Fill(dSet);
 
-                AbrirConexion();
-                comando.ExecuteNonQuery();
-                CerrarConexion();
+                OpenConnection();
+                command.ExecuteNonQuery();
+                CloseConnection();
 
                 return dSet;
             }
-            catch
+            catch (Exception ex)
             {
+                ConnectionMessage(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss - ") + ex.Message);
+
                 return new DataSet();
             }
         }
 
-        public string EjecutarBusquedaParametro(string sql)
+        public string RunQueryParameter(string sql)
         {
-            comando.Connection = LeerConexion();
-            comando.CommandText = sql;
+            command.Connection = Connection();
+            command.CommandText = sql;
 
             object resultado;
 
-            AbrirConexion();
-            resultado = comando.ExecuteScalar();
-            CerrarConexion();
+            OpenConnection();
+            resultado = command.ExecuteScalar();
+            CloseConnection();
 
             if (resultado == null)
             {
-                resultado = "Nulo";
+                resultado = string.Empty;
             }
 
             return resultado.ToString();
         }
 
-        public DataTable EjecutarBusquedaDatos(string sql)
+        public DataTable RunQueryDataTable(string sql)
         {
-            comando.Connection = LeerConexion();
-            comando.CommandText = sql;
+            command.Connection = Connection();
+            command.CommandText = sql;
 
-            DataTable dTable = new DataTable();                       
+            DataTable dTable = new DataTable();
 
-            AbrirConexion();            
-            dTable.Load(comando.ExecuteReader());
-            CerrarConexion();
+            OpenConnection();
+            dTable.Load(command.ExecuteReader());
+            CloseConnection();
 
             return dTable;
         }
 
-        public string EjecutarInstruccion(string sql)
+        public bool RunQueryCommand(string sql)
         {
-            if (sql != "")
+            if (!string.IsNullOrEmpty(sql))
             {
                 try
                 {
-                    comando.Connection = LeerConexion();
-                    comando.CommandText = sql;
+                    command.Connection = Connection();
+                    command.CommandText = sql;
 
-                    AbrirConexion();
-                    transaccion = cadenaConexion.BeginTransaction();
+                    OpenConnection();
+                    transaction = connection.BeginTransaction();
 
-                    comando.Transaction = transaccion;
-                    comando.ExecuteNonQuery();
-                    transaccion.Commit();
+                    command.Transaction = transaction;
+                    command.ExecuteNonQuery();
+                    transaction.Commit();
                 }
-                catch (Exception Excepcion)
+                catch (Exception ex)
                 {
-                    transaccion.Rollback();
+                    ConnectionMessage(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss - ") + ex.Message);
 
-                    return Excepcion.Message;
+                    transaction.Rollback();
+
+                    return false;
                 }
                 finally
                 {
-                    CerrarConexion();
+                    CloseConnection();
                 }
 
-                return "TRUE";
+                return true;
             }
 
-            return "FALSE";
-        }        
+            return false;
+        } 
     }
 }
