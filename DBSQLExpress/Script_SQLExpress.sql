@@ -7,10 +7,10 @@
  */
 
 IF EXISTS (SELECT name FROM master.dbo.sysdatabases WHERE name = N'TestSQLExpress')
-	DROP DATABASE [TestSQLExpress]
+	DROP DATABASE TestSQLExpress
 GO
 
-CREATE DATABASE [TestSQLExpress]  
+CREATE DATABASE TestSQLExpress
 	ON (
 	NAME = N'TestSQLExpress_Data', 
 	FILENAME = N'c:\DataBase\TestSQLExpress\TestSQLExpress_Data.MDF', 
@@ -22,35 +22,36 @@ CREATE DATABASE [TestSQLExpress]
 	COLLATE SQL_Latin1_General_CP1_CI_AS
 GO
 
-USE [TestSQLExpress]
+USE TestSQLExpress
 GO
 
-CREATE TABLE [dbo].[Usuarios] ( 
-	[Id_Usu] [Decimal](4) NOT NULL,
-	[Nombre] [varchar](50),
-	[Apellidos] [varchar](100),
-	[Direccion] [varchar](100),
-	[Telefono] [varchar](50),
-	[Email] [varchar](50),
-	[RFC] [varchar](50),
-	[Sueldo] [float] DEFAULT 0,
-	[Status] [int] DEFAULT 0,		--0: Eliminado, 1: No Eliminado
-	[Activo] [int] DEFAULT 0,		--0: Usuario No Activo, 1: Usuario Activo
+CREATE TABLE Usuarios ( 
+	Id_Usu Decimal(4) NOT NULL,
+	Nombre varchar(50),
+	Apellidos varchar(100),
+	Direccion varchar(100),
+	Telefono varchar(50),
+	Email varchar(50),
+	RFC varchar(50),
+	Sueldo float DEFAULT 0,
+	Status int DEFAULT 0,		--0: Eliminado, 1: No Eliminado
+	Activo int DEFAULT 0,		--0: Usuario No Activo, 1: Usuario Activo
 ) ON [PRIMARY]
 
-CREATE TABLE [dbo].[Equipos] ( 
-	[Id_Equ] [Decimal](4) NOT NULL,
-	[Id_Usu] [Decimal](4) NOT NULL,
-	[Nombre] [varchar](50),
-	[Fabricante] [varchar](50),
-	[Modelo] [varchar](50),
-	[NoSerie] [varchar](50),
-	[NoParte] [varchar](50),
-	[Status] [int] DEFAULT 0,		--0: Eliminado, 1: No Eliminado
-	[Activo] [int] DEFAULT 0,		--0: Usuario No Activo, 1: Usuario Activo
+CREATE TABLE Equipos ( 
+	Id_Equ Decimal(4) NOT NULL,
+	Id_Usu Decimal(4) NOT NULL,
+	Nombre varchar(50),
+	Fabricante varchar(50),
+	Modelo varchar(50),
+	NoSerie varchar(50),
+	NoParte varchar(50),
+	Status int DEFAULT 0,		--0: Eliminado, 1: No Eliminado
+	Activo int DEFAULT 0,		--0: Usuario No Activo, 1: Usuario Activo
 ) ON [PRIMARY]
 
-DELETE [Usuarios]
+DELETE Usuarios
+DELETE Equipos
 
 -- Creación de llaves primarias
 ALTER TABLE Usuarios ADD CONSTRAINT PK_Usuarios
