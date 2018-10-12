@@ -16,9 +16,16 @@ namespace DataBaseNet
 
         public DBSQLServer(string usuario, string contrasena, string nombreBD, string servidor = "localhost", string instancia = "MSSQLSERVER")
         {
-            connection = new SqlConnection("Data Source=" + servidor + "\\" + instancia + "; Initial Catalog=" + nombreBD + "; integrated security=false; User Id=sa; Password=" + contrasena + ";");
-            transaction = null;
-            command = new SqlCommand();
+            try
+            {
+                connection = new SqlConnection("Data Source=" + servidor + "\\" + instancia + "; Initial Catalog=" + nombreBD + "; integrated security=yes; User Id=sa; Password=" + contrasena + ";");
+                transaction = null;
+                command = new SqlCommand();
+            }
+            catch (Exception ex)
+            {
+                ConnectionMessage(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss - ") + ex.Message);
+            }
         }
 
         public DBSQLServer(string conexion)

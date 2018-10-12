@@ -31,7 +31,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btSQLConnection = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.tbSQLMessages = new System.Windows.Forms.TextBox();
             this.btSQLRun = new System.Windows.Forms.Button();
@@ -89,7 +89,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tbWorkspace = new System.Windows.Forms.TextBox();
-            this.btClose = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.btPostConnection = new System.Windows.Forms.Button();
@@ -110,6 +109,7 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.tbPostDataBase = new System.Windows.Forms.TextBox();
+            this.btClose = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -161,7 +161,7 @@
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.Controls.Add(this.button2);
+            this.groupBox3.Controls.Add(this.btSQLConnection);
             this.groupBox3.Controls.Add(this.button3);
             this.groupBox3.Controls.Add(this.tbSQLMessages);
             this.groupBox3.Controls.Add(this.btSQLRun);
@@ -173,15 +173,16 @@
             this.groupBox3.TabIndex = 14;
             this.groupBox3.TabStop = false;
             // 
-            // button2
+            // btSQLConnection
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(844, 142);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(84, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Conexión";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btSQLConnection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btSQLConnection.Location = new System.Drawing.Point(844, 142);
+            this.btSQLConnection.Name = "btSQLConnection";
+            this.btSQLConnection.Size = new System.Drawing.Size(84, 23);
+            this.btSQLConnection.TabIndex = 5;
+            this.btSQLConnection.Text = "Conexión";
+            this.btSQLConnection.UseVisualStyleBackColor = true;
+            this.btSQLConnection.Click += new System.EventHandler(this.btSQLConnection_Click);
             // 
             // button3
             // 
@@ -270,7 +271,6 @@
             // 
             // btSQLConnect
             // 
-            this.btSQLConnect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btSQLConnect.Location = new System.Drawing.Point(765, 53);
             this.btSQLConnect.Name = "btSQLConnect";
             this.btSQLConnect.Size = new System.Drawing.Size(98, 23);
@@ -795,17 +795,6 @@
             this.tbWorkspace.Text = "XE";
             this.tbWorkspace.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // btClose
-            // 
-            this.btClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btClose.Location = new System.Drawing.Point(891, 529);
-            this.btClose.Name = "btClose";
-            this.btClose.Size = new System.Drawing.Size(75, 23);
-            this.btClose.TabIndex = 3;
-            this.btClose.Text = "Cerrar";
-            this.btClose.UseVisualStyleBackColor = true;
-            this.btClose.Click += new System.EventHandler(this.btClose_Click);
-            // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.groupBox7);
@@ -1023,6 +1012,17 @@
             this.tbPostDataBase.Text = "TestPostgreSQL";
             this.tbPostDataBase.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // btClose
+            // 
+            this.btClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btClose.Location = new System.Drawing.Point(891, 529);
+            this.btClose.Name = "btClose";
+            this.btClose.Size = new System.Drawing.Size(75, 23);
+            this.btClose.TabIndex = 3;
+            this.btClose.Text = "Cerrar";
+            this.btClose.UseVisualStyleBackColor = true;
+            this.btClose.Click += new System.EventHandler(this.btClose_Click);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1089,7 +1089,7 @@
         private System.Windows.Forms.Button btConnection;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btSQLConnection;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox tbSQLMessages;
         private System.Windows.Forms.Button btSQLRun;

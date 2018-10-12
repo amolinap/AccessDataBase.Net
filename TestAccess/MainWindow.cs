@@ -102,6 +102,13 @@ namespace DataBasesTest
         private void btSQLConnect_Click(object sender, EventArgs e)
         {
             sqlServer = new DBSQLServer(tbSQLUser.Text, tbSQLPassword.Text, tbSQLCatalog.Text, tbSQLServer.Text, tbSQLInstance.Text);
+
+            sqlServer.ConnectionMessage += sqlServer_ConnectionMessage;
+        }
+
+        void sqlServer_ConnectionMessage(string message)
+        {
+            tbSQLMessages.AppendText(message + Environment.NewLine);
         }
 
         private void btSQLRun_Click(object sender, EventArgs e)
@@ -117,6 +124,11 @@ namespace DataBasesTest
                     MessageBox.Show(ex.Message);
                 }
             }
+        }
+
+        private void btSQLConnection_Click(object sender, EventArgs e)
+        {
+            tbSQLMessages.AppendText(sqlServer.ConnectionString() + Environment.NewLine);
         }
 
         DBMySQL mySQL;
