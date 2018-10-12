@@ -38,12 +38,29 @@ CREATE TABLE [dbo].[Usuarios] (
 	[Activo] [int] DEFAULT 0,		--0: Usuario No Activo, 1: Usuario Activo
 ) ON [PRIMARY]
 
+CREATE TABLE [dbo].[Equipos] ( 
+	[Id_Equ] [Decimal](4) NOT NULL,
+	[Id_Usu] [Decimal](4) NOT NULL,
+	[Nombre] [varchar](50),
+	[Fabricante] [varchar](50),
+	[Modelo] [varchar](50),
+	[NoSerie] [varchar](50),
+	[NoParte] [varchar](50),
+	[Status] [int] DEFAULT 0,		--0: Eliminado, 1: No Eliminado
+	[Activo] [int] DEFAULT 0,		--0: Usuario No Activo, 1: Usuario Activo
+) ON [PRIMARY]
+
 DELETE [Usuarios]
 
 ALTER TABLE Usuarios ADD CONSTRAINT PK_Usuarios
 PRIMARY KEY (Id_Usu)
 
---ALTER TABLE Ventas ADD CONSTRAINT FK_Ventas_Usuario
---FOREIGN KEY (ID_Usuario) REFERENCES Usuarios (ID_Usuario)
+ALTER TABLE Equipos ADD CONSTRAINT PK_Equipos
+PRIMARY KEY (Id_Equ)
 
-insert into usuarios(id_usu, nombre, apellidos, email, rfc, sueldo, status, activo) values (1, 'Peter', 'Parker', 'peterparker@gmail.com', 'ABCD800808XYZ', 90, 1, 1);
+ALTER TABLE Equipos ADD CONSTRAINT FK_Equipos_Usuario
+FOREIGN KEY (ID_Usu) REFERENCES Usuarios (ID_Usu)
+
+insert into Usuarios(id_usu, nombre, apellidos, email, rfc, sueldo, status, activo) values (1, 'Peter', 'Parker', 'peterparker@gmail.com', 'ABCD800808XYZ', 90, 1, 1);
+insert into Equipos(id_equ, id_usu, nombre, fabricante, modelo, noserie, noparte, status, activo) 
+	values (1, 1, 'Laptop', 'Apple', 'MacBook Pro 13"', 'NS000000001', 'NP000000001', 1, 1);
