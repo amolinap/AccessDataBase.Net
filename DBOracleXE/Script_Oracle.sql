@@ -1,3 +1,20 @@
+-----------------------------------------------
+--SELECT table_name FROM user_tables
+--select instance_name,  status from  v$instance;
+
+-- Nombre del Server Host
+--SELECT SYS_CONTEXT ('USERENV', 'SERVER_HOST') FROM DUAL;  
+
+-- Nombre del Servicio de Oracle XE
+--select sys_context('userenv','instance_name') from dual;
+--SELECT instance FROM v$thread;
+
+-- Cambiar de Workspace
+--ALTER SESSION SET CURRENT_SCHEMA = TESTDATABASE;
+
+-- Ver versiones
+--SELECT * FROM PRODUCT_COMPONENT_VERSION;
+
 drop table equipos
 drop table usuarios
 
