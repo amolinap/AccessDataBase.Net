@@ -2,7 +2,7 @@
 
 Esta sección describe el uso de la Base de Datos **Microsoft SQL Server 2014 Express**
 
-## Descargas
+## 1. Descargas
 
 A continuación se exponen las direcciones para la descarga.
 
@@ -11,7 +11,9 @@ A continuación se exponen las direcciones para la descarga.
 
 **NOTA**: Por defecto Visual Studio incluye las librerías para trabajar con SQL Server, por lo que no es necesario descargarlas.
 
-## Durante la instalación
+> System.Data.dll, C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.
+
+## 2. Durante la instalación
 
 A continuación se mencionan algunas recomendaciones durante la instalación:
 
@@ -20,3 +22,14 @@ A continuación se mencionan algunas recomendaciones durante la instalación:
 2. En la configuración del modo de autenticación active la opción de Mixed Mode y confirme el password.
 3. Recuerde que la cuenta creada después de la instalación de SQL Server Express es para el usuario sa.
 ```
+
+## 3. Posterior a la instalación
+
+A continuación se mencionan algunas recomendaciones posterior a la instalación:
+
+```
+1. Verificar que los servicios de SQL Server se están ejecutando.
+2. Para conexiones remotas verificar SQL Server Network Configuration, TCP/IP IP Addresses.
+```
+
+Tome como guía el archivo **Script_SQLExpress.sql** para comenzar su desarrollo.
