@@ -237,6 +237,7 @@
             this.tbSQLCommand.Location = new System.Drawing.Point(6, 21);
             this.tbSQLCommand.Multiline = true;
             this.tbSQLCommand.Name = "tbSQLCommand";
+            this.tbSQLCommand.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tbSQLCommand.Size = new System.Drawing.Size(832, 91);
             this.tbSQLCommand.TabIndex = 0;
             // 
@@ -453,6 +454,7 @@
             this.tbMySQLCommand.Location = new System.Drawing.Point(6, 21);
             this.tbMySQLCommand.Multiline = true;
             this.tbMySQLCommand.Name = "tbMySQLCommand";
+            this.tbMySQLCommand.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tbMySQLCommand.Size = new System.Drawing.Size(832, 91);
             this.tbMySQLCommand.TabIndex = 0;
             // 
@@ -671,6 +673,7 @@
             this.tbSQLOracle.Location = new System.Drawing.Point(6, 21);
             this.tbSQLOracle.Multiline = true;
             this.tbSQLOracle.Name = "tbSQLOracle";
+            this.tbSQLOracle.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tbSQLOracle.Size = new System.Drawing.Size(832, 91);
             this.tbSQLOracle.TabIndex = 0;
             // 
@@ -888,6 +891,7 @@
             this.tbPostCommand.Location = new System.Drawing.Point(6, 21);
             this.tbPostCommand.Multiline = true;
             this.tbPostCommand.Name = "tbPostCommand";
+            this.tbPostCommand.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tbPostCommand.Size = new System.Drawing.Size(832, 91);
             this.tbPostCommand.TabIndex = 0;
             // 
