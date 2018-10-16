@@ -21,7 +21,6 @@ namespace DataBasesTest
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -101,7 +100,7 @@ namespace DataBasesTest
         DBSQLServer sqlServer;
         private void btSQLConnect_Click(object sender, EventArgs e)
         {
-            sqlServer = new DBSQLServer(tbSQLUser.Text, tbSQLPassword.Text, tbSQLCatalog.Text, tbSQLServer.Text, tbSQLInstance.Text);
+            sqlServer = new DBSQLServer(tbSQLUser.Text, tbSQLPassword.Text, tbSQLCatalog.Text, tbSQLServer.Text, tbSQLInstance.Text, cxIsExpress.Checked);
 
             sqlServer.ConnectionMessage += sqlServer_ConnectionMessage;
         }

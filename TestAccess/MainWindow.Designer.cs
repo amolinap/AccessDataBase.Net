@@ -111,6 +111,7 @@
             this.label20 = new System.Windows.Forms.Label();
             this.tbPostDataBase = new System.Windows.Forms.TextBox();
             this.btClose = new System.Windows.Forms.Button();
+            this.cxIsExpress = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -245,6 +246,7 @@
             // 
             this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox4.Controls.Add(this.cxIsExpress);
             this.groupBox4.Controls.Add(this.label6);
             this.groupBox4.Controls.Add(this.btSQLConnect);
             this.groupBox4.Controls.Add(this.tbSQLCatalog);
@@ -1028,6 +1030,18 @@
             this.btClose.UseVisualStyleBackColor = true;
             this.btClose.Click += new System.EventHandler(this.btClose_Click);
             // 
+            // cxIsExpress
+            // 
+            this.cxIsExpress.AutoSize = true;
+            this.cxIsExpress.Checked = true;
+            this.cxIsExpress.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cxIsExpress.Location = new System.Drawing.Point(869, 24);
+            this.cxIsExpress.Name = "cxIsExpress";
+            this.cxIsExpress.Size = new System.Drawing.Size(101, 21);
+            this.cxIsExpress.TabIndex = 11;
+            this.cxIsExpress.Text = "Es Espress";
+            this.cxIsExpress.UseVisualStyleBackColor = true;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1152,6 +1166,7 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox tbPostDataBase;
+        private System.Windows.Forms.CheckBox cxIsExpress;
     }
 }
 

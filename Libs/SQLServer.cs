@@ -14,11 +14,16 @@ namespace DataBaseNet
         private SqlCommand command;
         private SqlTransaction transaction;
 
-        public DBSQLServer(string usuario, string contrasena, string nombreBD, string servidor = "localhost", string instancia = "MSSQLSERVER")
+        public DBSQLServer(string usuario, string contrasena, string nombreBD, string servidor = "localhost", string instancia = "MSSQLSERVER", bool isExpress = true)
         {
             try
             {
-                connection = new SqlConnection("Data Source=" + servidor + "\\" + instancia + "; Initial Catalog=" + nombreBD + "; integrated security=yes; User Id=sa; Password=" + contrasena + ";");
+                if (!isExpress)
+                {
+                    instancia = instancia + ", 1433";
+                }
+
+                connection = new SqlConnection("Data Source=" + servidor + "\\" + instancia + "; Initial Catalog=" + nombreBD + "; integrated security=false; User Id=" + usuario + "; Password=" + contrasena + ";");
                 transaction = null;
                 command = new SqlCommand();
             }
