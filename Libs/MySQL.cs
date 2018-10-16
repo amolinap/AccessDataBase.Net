@@ -36,7 +36,7 @@ namespace DataBaseNet
 
         public DBMySQL(string user, string pass, string db_name, string server, int port = 3306)
         {
-            connection = new MySqlConnection("server=" + server + ";port=" + port + ";user id=" + user + ";password=" + pass + ";database=" + db_name + ";sslmode=none;persistsecurityinfo=True;");
+            connection = new MySqlConnection("Persist Security Info=False;server=" + server + ";port=" + port + ";user id=" + user + ";password=" + pass + ";database=" + db_name + ";Connect Timeout=30");//sslmode=none;persistsecurityinfo=True;");
             transaction = null;
             command = new MySqlCommand();
         }
