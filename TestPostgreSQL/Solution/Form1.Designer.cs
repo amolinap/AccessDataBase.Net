@@ -37,15 +37,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lbSize = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pxImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // pxImage
             // 
-            this.pxImage.Location = new System.Drawing.Point(15, 12);
+            this.pxImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pxImage.Location = new System.Drawing.Point(470, 12);
             this.pxImage.Name = "pxImage";
-            this.pxImage.Size = new System.Drawing.Size(165, 152);
+            this.pxImage.Size = new System.Drawing.Size(300, 300);
             this.pxImage.TabIndex = 0;
             this.pxImage.TabStop = false;
             // 
@@ -120,11 +122,21 @@
             this.dataGridView1.Size = new System.Drawing.Size(827, 170);
             this.dataGridView1.TabIndex = 8;
             // 
+            // lbSize
+            // 
+            this.lbSize.AutoSize = true;
+            this.lbSize.Location = new System.Drawing.Point(352, 216);
+            this.lbSize.Name = "lbSize";
+            this.lbSize.Size = new System.Drawing.Size(28, 17);
+            this.lbSize.TabIndex = 9;
+            this.lbSize.Text = "----";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(924, 521);
+            this.Controls.Add(this.lbSize);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
@@ -154,6 +166,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label lbSize;
     }
 }
 

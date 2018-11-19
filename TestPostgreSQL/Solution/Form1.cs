@@ -27,7 +27,26 @@ namespace TestPostgreSQL
 
             if (ofImage.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                pxImage.Image = Image.FromFile(ofImage.FileName);
+                Image img = Image.FromFile(ofImage.FileName);
+                
+                float prop = 0;
+                prop = 300.0f / img.Width;
+
+                if ((300.0f / img.Height) < prop)
+                {
+                    prop = 300.0f / img.Height;
+                }
+
+                pxImage.Width = (int)(img.Width * prop);
+                pxImage.Height = (int)(img.Height * prop);
+
+                lbSize.Text = pxImage.Width.ToString() + "x" + pxImage.Height.ToString();
+
+                //Bitmap bitmap = new Bitmap(img, pxImage.Width, pxImage.Height);
+                Bitmap bitmap = new Bitmap(img, pxImage.Width, pxImage.Height);
+
+                pxImage.Image = bitmap;//Image.From(ofImage.FileName);
+                pxImage.SizeMode = PictureBoxSizeMode.StretchImage;
             }
         }
 
