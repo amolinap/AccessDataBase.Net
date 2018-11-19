@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Libs", "Libs\Libs.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAccess", "TestAccess\TestAccess.csproj", "{D5018BEB-82B4-4D73-A236-6E7C898B7C1C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestPostgreSQL", "TestPostgreSQL\Solution\TestPostgreSQL.csproj", "{A3CC092F-7E07-4213-998E-08C7B2B7A81B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{D5018BEB-82B4-4D73-A236-6E7C898B7C1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5018BEB-82B4-4D73-A236-6E7C898B7C1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5018BEB-82B4-4D73-A236-6E7C898B7C1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3CC092F-7E07-4213-998E-08C7B2B7A81B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3CC092F-7E07-4213-998E-08C7B2B7A81B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3CC092F-7E07-4213-998E-08C7B2B7A81B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3CC092F-7E07-4213-998E-08C7B2B7A81B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
