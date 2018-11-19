@@ -80,5 +80,13 @@ namespace TestPostgreSQL
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string sql = "select id_emp, nombre, foto from empleados;";
+
+            dataGridView1.DataSource = postgresSQL.RunQueryDataSet(sql).Tables[0].DefaultView;
+            
+        }
     }
 }
